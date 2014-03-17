@@ -1,0 +1,181 @@
+/* Created by http://freehtml5templates.com */
+
+/* BASICS */
+
+header, footer, section, article, aside, nav {
+	display: block;
+	}
+	
+body {
+	margin: 0 auto;
+	width: 960px;
+	font: 14px Garamond, Georgia, Times, "Times New Roman", serif;
+	background: #f8f3df url('images/papertop.jpg') repeat-x; text-align:center;
+	}
+	
+h1 { font-size: 34px; }
+h2 { font-size: 22px; }
+h3 { font-size: 18px; }
+	
+.alignleft {float: left;}
+
+img.alignleft {
+	margin: 5px 10px 0 0; 
+	border-style: double;
+	}
+
+.alignright {float: right;}
+
+img.alignright {
+	margin: 5px 0 0 10px; 
+	border-style: double;
+	}
+
+/* LINKS */
+
+a:link, a:visited {
+	text-decoration: none;
+	color: #29221c;
+	}
+	
+a:hover, a:active {
+	text-decoration: none;
+	color: #9800A2;
+	}
+
+/* HEADER */
+
+header {
+		float:left;
+		width:960px;
+		margin-bottom:15px;
+		background: transparent url('images/logo.png') 662px 117px no-repeat; padding: 50px 0 20px 0;   margin: 0; min-height: 275px !important;
+		position: relative;
+		}
+	
+header h1 {
+		position: absolute;
+		top: 55px;
+		left: 25px;
+		color: #29221c;
+		display:block; 
+		margin-bottom:10px;
+		float: right;
+		padding-right: 20px;
+		}
+		
+	
+header h2 	{ 
+			position: absolute;
+			top: 120px;
+			left: 25px;
+			font-size:19px; 
+			color:#9800A2; 
+			font-weight:bold; 
+			}
+			
+		header p { 
+			position: absolute;
+			top: 160px;
+			left: 25px;
+			font-size: 14px; 
+			text-align: left;
+			color:#29221c; 
+			font-style:italic; 
+			padding: 0; 
+			margin:0; 
+			width:620px; 
+			}
+		
+/* TOP NAVIGATION MENU */
+
+		nav {
+			position: relative;
+			top: 0;
+			right: 0;
+			}
+
+		nav ul		{ 
+			position:absolute;
+			top: 10px; 
+			right: 25px;
+		  z-index: 1;
+			float: right;
+			padding: 25px;
+			list-style: none; 
+			}
+			
+		nav ul li	{ 
+			float:left; 
+			margin:0; 
+			padding:0; 
+			text-transform:uppercase; 
+			font-size:20px; 
+			font-weight:bold; 
+			display: block; 
+			padding-left:15px; 
+			}
+			
+		
+
+/* CONTENT */
+
+#content {
+	float: left; 
+	width: 630px; 
+	margin:0 5px 0 0; 
+	padding:0;
+	border-top: 2px solid #C7B5A7;
+	}
+	
+article h2 {
+	text-align: left;
+	}
+	
+.article_columns {
+	text-align: justify;
+	-moz-column-count: 2;
+	-moz-column-gap: 1.5em;
+	-moz-column-rule: 1px solid #C7B5A7;
+	-webkit-column-count: 2;
+	-webkit-column-gap: 1.5em;
+	-webkit-column-rule: 1px solid #C7B5A7;
+	}
+
+/* SIDEBAR */
+
+aside {
+	float: right;
+	text-align: left; 
+	width: 300px; 
+	margin:0; 
+	padding:0;
+	border-top: 2px solid #C7B5A7;
+	}
+	
+	aside li {
+		list-style: none;
+		}
+		
+		aside li ul li {
+			list-style: square outside;
+			color: #9800A2;
+			}
+
+/* FOOTER */
+
+footer {
+	border-top: 1px solid #C7B5A7;
+	text-align: right;
+	overflow: hidden;
+	width: 100%;
+	clear: both;
+	}
+	
+footer p {
+  text-align: right;
+  font-size: 11px;
+	padding-right: 10px;
+}
+
+

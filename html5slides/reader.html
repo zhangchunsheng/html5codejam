@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>reader</title>
+		<meta charset="utf-8" />
+		<script type="text/javascript">
+			function showText(id) {
+				var node = document.getElementById(id);
+				node.style.display = "block";
+			}
+			window.onclick = function(e) {
+				if(e.target.id == "hello")
+					return;
+				var node = document.getElementById("node");
+				node.style.display = "none";
+			}
+		</script>
+	</head>
+	<body>
+		<mark id="hello" onclick="showText('node')">hello</mark> world!
+		<div id="node" style="display:none">《不能说的秘密》</div>
+	</body>
+</html>

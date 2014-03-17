@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+
+<!--
+  Google HTML5 slide template
+
+  Authors: Luke Mahé (code)
+           Marcin Wichary (code and design)
+           
+           Dominic Mazzoni (browser compatibility)
+           Charles Chen (ChromeVox support)
+
+  URL: http://code.google.com/p/html5slides/
+-->
+
+<!--
+	@author zhang
+	@description html5分享
+	@date 2011-09-18
+-->
+<html>
+	<head>
+		<title>html5分享</title>
+		<meta charset='utf-8'>
+		<script src='../slides_html5.js'></script>
+	</head>
+
+	<style>
+		/* Your individual styles here, or just use inline styles if that’s
+		   what you want. */
+	</style>
+
+	<body style='display: none'>
+		<section class='slides layout-regular template-io2011'>
+			<!-- Your slides (<article>s) go here. Delete or comment out the
+			   slides below. -->
+			<article class='biglogo'>
+			</article>
+
+			<article>
+				<h1>
+					HTML5已经到来
+					<br>
+					你准备好了吗？
+				</h1>
+				<p>
+					张春生
+					<br>
+					2011-09-18
+				</p>
+			</article>
+			
+			<article>
+				<h3>内容介绍</h3>
+				<ul class="build">
+					<li>HTML5的曲折诞生史</li>
+					<li>HTML5语法</li>
+					<li>HTML5布局</li>
+					<li>HTML5表单</li>
+					<li>HTML5音频</li>
+					<li>HTML5视频</li>
+					<li>HTML5定位</li>
+					<li>HTML5动画</li>
+					<li>HTML5中的websocket</li>
+					<li>设计师应该知道HTML5</li>
+					<li>未来很美好</li>
+				</ul>
+			</article>
+			
+			<article>
+				<h3>HTML5的曲折诞生史</h3>
+				<ul>
+					<li>html是web的基础，1982年，Tim Berners-Lee为使世界各地的物理学家能够方便的进行合作研究，创建了使用于其系统的HTML。最初仅有少量标记易于掌握运用</li>
+					<li>从IETF到W3C:HTML 4之路</li>
+					<span>
+						1995年HTML 2.0
+						<br />1996年HTML 3.2
+						<br />1997年HTML 4.0
+						<br />1999年HTML 4.01
+					</span>
+					<li>2000年XHTML 1.0</li>
+					<span>
+						XML风格的HTML 没有引入新的标签，严格要求语法，标签小写
+					</span>
+				</ul>
+			</article>
+			
+			<article>
+				<h3>HTML5的曲折诞生史</h3>
+				<ul>
+					<li>2001年XHTML 1.1</li>
+					<span>IE不支持XML mime-type</span>
+					<li>着力不讨好的XHTML 2</li>
+					<li>WHATWG:另起炉灶（转折）</li>
+					<span>W3C凭空杜撰的作风引起了部分人的不满，来自Opera,Apple,以及Mozilla的代表开始表达反对声。2004年Opera的Ian Hickson(伊恩•希克森)发起的HTML新标签扩展以适应新的web应用，该发起遭到W3C的拒绝，于是他们自发创建了超文本应用技术工作组，便是WHATWG</li>
+				</ul>
+			</article>
+			
+			<article>
+				<h3>HTML5的曲折诞生史</h3>
+				<ul>
+					<li>从Web Applications 1.0到HTML5</li>
+					<span>刚开始，WHATWG就和W3C走不通的道路，W3C对题目的会商是团体投票，而WHATWG则有主笔Ian Hickson定度。表面上看，W3C更民主，然而种种内部纷争会使部分决议限于泥潭，在WHATWG事情进展的更顺利，不过主笔权利并非无穷大，他们的委员会可以对那些过于偏执的主笔举行弹劾。</span>
+					<br />
+					<span>WHATWG的重要议题包含两部分，Web Forms 2.0和Web Applications 1.0，他们都是HTML的扩展，逐步演变成今天的HTML5</span>
+				</ul>
+			</article>
+			
+			<article>
+				<h3>HTML5的曲折诞生史</h3>
+				<ul>
+					<li>言归于好</li>
+					<span>在WHATWG致力于HTML5的同时，W3C已陷入XHTML 2.0的窘境。2006年10月，Web之父Tim Berners-Lee发表了一篇文章，表示从HTML走向XML的路是行不通的，几个月后，W3C迷途知返，组建了一个新的HTML工作组，他们非常明智的选择了WHATWG的成果作为根本。然而也有人对W3C表示怀疑，因为W3C在同时进行两套标准（XHTML 2.0和HTML 5），值得注意的是W3C的HTML 5中间有个空格，而WHATWG的HTML5则没有空格。</span>
+					<li>想参加W3C官方html5中文小组的同学，可以发送邮件到：</li>
+					<span>public-html-ig-zh-reqest@w3.org</span>
+				</ul>
+			</article>
+			
+			<article>
+				<h3>HTML5与Jobs</h3>
+				<ul>
+					<li>尽管HTML5已经在网络开发人员中非常出名了，但是它成为主流媒体的一个话题还是在2010年的4月，[5][6][7][8]当时苹果公司的CEO乔布斯发表一篇题为“对flash的思考”的文章，指出随着HTML5的发展，观看视频或其它内容时，Adobe Flash将不再是必须的。这引发了开发人员间的争论，包括HTML5虽然提供了增强的功能，但开发人员必须考虑到不同浏览器对标准不同部分的支持程度的不同，以及HTML5和Flash间的功能差异。[9]HTML 5的标准草案目前已进入W3C制定标准5大程序的第1步。负责编纂标准格式文件的Google代表Ian Hickson预期，可能得等到2012年才会推出建议候选版（W3C Candidate Recommendation）。</li>
+				</ul>
+			</article>
+			
+			<article>
+				<h3>HTML5语法<h3>
+				<ul>
+					<li>新的Doctype声明</li>
+					<span>
+						以前：
+						<br />
+						&lt;!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd"&gt;
+						<br />
+						&lt;!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN""http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"&gt;
+						<br />
+						现在：
+						<br />
+						&lt;!DOCTYPE html&gt;
+					</span>
+				</ul>
+			</article>
+			
+			<article>
+				<h3>HTML5语法<h3>
+				<ul>
+					<li>向前兼容</li>
+					<span>
+						&lt;HTML&gt;&lt;/HTML&gt;
+						<br />
+						&lt;div&gt;hello
+						<br />
+						&lt;div class="hello"&gt;&lt;/div&gt;
+						<br />
+						&lt;div class=hello&gt;&lt;/div&gt;
+						<br />
+						&lt;div class=‘hello’&gt;&lt;/div&gt;
+					</span>
+					<li>新增标签</li>
+					<span>
+						&lt;nav&gt;&lt;/nav&gt;、&lt;header&gt;&lt;/header&gt;、&lt;article&gt;&lt;/article&gt;、&lt;footer&gt;&lt;/footer&gt;
+						<br />
+						&lt;audio&gt;&lt;/audio&gt;、&lt;video&gt;&lt;/video&gt;
+						<br />
+						&lt;canvas&gt;&lt;/canvas&gt;
+						<br />
+					</span>
+				</ul>
+			</article>
+			
+			<article class="nobackground">
+				<h3>HTML5布局</h3>
+				<p><a href="../magazine.html">magazine</a></p>
+				<!--<iframe src="../magazine.html"></iframe>-->
+			</article>
+			
+			<article>
+				<h3>HTML5表单</h3>
+				<ul>
+					<li>我们爱html，现在它反过来爱我们</li>
+					<span>
+						必须填写：required
+						<br />
+						验证：type="email" type="tel" type="url"
+						<br />
+						范围 min="1" max="10"
+						<br />
+						<a href="./form.html">form</a>
+					</span>
+				</ul>
+			</article>
+			
+			<article>
+				<h3>HTML5音频</h3>
+				<ul>
+					<li>混音</li>
+					<span>
+						<a href="./audio.html">audio</a>
+					</span>
+					<li>预加载</li>
+					<span>preload</span>
+					<li>钢琴</li>
+					<span>
+						<a href="http://google-html5-hackathon-projects.googlecode.com/hg/real-piano/index.html">piano</a>
+					</span>
+				</ul>
+			</article>
+			
+			<article>
+				<h3>HTML5视频</h3>
+				<ul>
+					<li>混音</li>
+					<span>
+						<a href="./vedio.html">vedio</a>
+					</span>
+					<li>预加载</li>
+					<span>preload</span>
+				</ul>
+			</article>
+			
+			<article>
+				<h3>HTML5定位</h3>
+				<ul>
+					<li>Google Maps</li>
+					<span>
+						<a href="../map_geolocation.html">geolocation</a>
+					</span>
+				</ul>
+			</article>
+			
+			<article>
+				<h3>HTML5动画</h3>
+				<ul>
+					<li>游戏</li>
+					<span>
+						<a href="http://localhost:9090/html5/mogu/">蘑菇动起来</a>
+					</span>
+					<li>画图</li>
+					<span>
+						<a href="../drawApplication.html">drawApplication</a>
+					</span>
+				</ul>
+			</article>
+			
+			<article>
+				<h3>HTML5中的websocket</h3>
+				<ul>
+					<li>我们需要标准</li>
+					<span>
+						浏览器版本更新，一些程序需要调整，程序员还在郁闷为什么？
+						<br />
+						chrome说： IETF:Internet工程任务组（Internet Engineering Task Force）又有了新的握手方式，让我们来实现它吧
+						<br />
+						mozilla,opera说：看起来websocket并不安全，我们在下一个版本中将不再支持websocket
+						<br />
+						ie说：我们要开发一个超时代的浏览器，至少十年不更新，但是必须使用windows 7
+						<br />
+						想到这里，我只能感慨一句话“还好我们还有苹果”，谢谢Jobs
+					</span>
+				</ul>
+			</article>
+			
+			<article>
+				<h3>设计师应该知道HTML5</h3>
+				<ul>
+					<li>我们需要标准</li>
+					<span>
+						1、离线缓存
+						<br />
+						2、音频视频
+						<br />
+						3、地理定位
+						<br />
+						4、Canvas绘图
+						<br />
+						5、专为移动平台定制的表单元素
+						<br />
+						6、丰富的交互方式支持
+						<br />
+						7、HTML5使用上的优势
+						<br />
+						8、CSS3 视觉设计师的辅助利器
+						<br />
+						9、实时通讯
+						<br />
+						10、档案以及硬件支持
+						<br />
+						11、语意化
+						<br />
+						12、双平台融合的app开发方式，提高工作效率
+					</span>
+				</ul>
+			</article>
+			
+			<article>
+				<h3>html5是app的终结者？</h3>
+				<ul>
+					<li>移动互联网</li>
+					<span>
+						移动操作系统 平台过多有木有
+						<br />ios android windows phone RIM megoo bada
+						<br />
+						需要一个语言一统天下
+						<br />
+						我认为html5会像iphone给我们带来的惊喜一样，引领一场划时代的科技革命
+					</span>
+				</ul>
+			</article>
+			
+			<article>
+				<h3>HTML5现状及展望</h3>
+				<ul>
+					<li>
+						现在HTML5的标准还没有完全定制完成，整体开发方式上还没有一个规范性的内容，导致的结果是开发者开发的应用比较混乱，体验上也不及原生方式开发的应用，如果想要更好的用户体验，需要更多的优化。
+						对于移动设备硬件的接口API，目前使用HTML5还不能方便调用移动设备的摄像头、话筒、重力感应器、GPS等硬件设备，不过这也只是时间问题，相信随着HTML5的越发完善，这样的功能一定也会支持的。
+						还有一个方面就是浏览器之争，一个全面强大的移动端浏览器将对HTML5在移动平台上的发展起到至关重要的作用。
+					</li>
+				</ul>
+			</article>
+			
+			<!--<article>
+				<h3>IE9</h3>
+				<ul>
+					<li>广告</li>
+					<span>
+						<a href="./ie9.html">ie9</a>
+					</span>
+				</ul>
+			</article>-->
+			
+			<article>
+				<h3>动手</h3>
+				<ul>
+					<li>笔记</li>
+					<span>
+						<a href="../reader.html">reader</a>
+					</span>
+				</ul>
+			</article>
+			
+			<article>
+				<h3>致谢</h3>
+				<div style="font-famili:'La Belle Aurore; font-size=48px; margin-top:200px; text-align:right;'">Thank you!</div>
+			</article>
+		</section>
+	</body>
+</html>

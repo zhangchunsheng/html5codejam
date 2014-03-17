@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta http-equiv="content-type" content="text/html;charset=utf-8" />
+		<script type="text/javascript">
+			var ball;
+			var mouseX = 100;
+			var mouseY = 100;
+			var radius = 0;
+			
+			var ballstyle = ".";
+			var ballcolor = "#FF0000";
+			var allzindex = 0;
+			
+			var canvas;
+			var context;
+			
+			//old position
+			var opos;
+			
+			function draw() {
+				ball = document.createElement("p");
+				ball.style.position = "absolute";
+				ball.style.color = ballcolor;
+				ball.style.zIndex = allzindex;
+				ball.innerHTML = ballstyle;
+				document.body.appendChild(ball);
+				document.all.selected = false;
+				ball.style["left"] = mouseX + "px";
+				ball.style["top"] = monseY + "px";
+			}
+			
+			function drawLine(npos) {
+				if(opos) {
+					context.beginPath();
+					//start from the top-left point
+					context.moveTo(opos.x, opos.y);
+					context.lineTo(npos.x, npos.y);
+					context.stroke();
+					context.closePath();
+				}
+			}
+			
+			function mousePos(e) {
+				var x,y;
+				if(!document.all) {
+					x = e.pageX;
+					y = e.pageY;
+				} else {
+					x = event.clientX + document.documentElement.scrollLeft;
+					y = event.clientY + document.documentElement.scrollTop;
+				}
+				return {x:x,y:y};
+			}
+			
+			function setXY(e) {
+				var pos = mousePos(e);
+				mouseX = pos.x;
+				mouseY = pos.y;
+				drawLine(pos);
+				opos = pos;
+			}
+			
+			window.onload = function() {
+				//get canvas and context
+				canvas = document.getElementById("canvas");
+				context = canvas.getContext("2d");
+			}
+			
+			document.documentElement.onmousemove = function(e) {
+				setXY(e);
+			}
+		</script>
+	</head>
+	<body>
+		<canvas id="canvas" border="1" width="800" height="600">
+		</canvas>
+	</body>
+</html>

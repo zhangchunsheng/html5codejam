@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>form</title>
+		<!-- <meta http-equiv="content-type" content="text/html;charset=utf-8" /> -->
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width,minimum-scale=1.0,maximum-scale=1.0" />
+		<link rel="icon" type="image/png" href="" />
+		<link rel="apple-touch-icon" href="" />
+		<style type="text/css">
+			
+		</style>
+	</head>
+	<body>
+		<form method="get">
+			<label>* is required</label>
+			<br />
+			<label for="userName">userName(*):</label>
+			<input id="userName" name="userName" placeholder="4 <> 10" required="required" autofocus="autofocus" pattern="[A-Za-z]{4,10}"></input>
+			<br />
+			<label for="date">date:</label>
+			<input id="date" name="date" type="date"></input>
+			<br />
+			<label for="email">Email:</label>
+			<!-- 电子邮件验证 占位符placeholder -->
+			<input id="email" type="email" name="email" placeholder="google@google.com"></input>
+			<!--<br />
+			<label for="country">country:</label>
+			<input id="country" type="text" name="country" list="countries" />
+			<datalist id="countries">
+				<option value="Australia">
+				<option value="Canada">
+				<option value="Germany">
+				<option value="France">
+				<option value="United Kingdom">
+				<option value="United States">
+			</datalist>-->
+			<br />
+			<label for="computers">computers:</label>
+			<input  name="computers" type="number" min="0" max="100" step="1" value="1" />
+			<br />
+			<button type="submit">确定</button>
+		</form>
+	</body>
+</html>

@@ -1,0 +1,110 @@
+2011-09-21
+html5诞生过程,webapp w3c官僚主义
+html是web的基础，1982年，Tim Berners-Lee为使世界各地的物理学家能够方便的进行合作研究，创建了使用于其系统的HTML。最初仅有少量标记易于掌握运用
+从IETF到W3C:HTML 4之路 1995年HTML 2.0 1996年HTML 3.2 1997年HTML 4.0 1999年HTML 4.01
+XHTML 1.0: 2000年 XML风格的HTML 没有引入新的标签，严格要求语法，标签小写
+XHTML 1.1：2001年 IE不支持XML mime-type
+着力不讨好的XHTML 2
+WHATWG:另起炉灶 W3C凭空杜撰的作风引起了部分人的不满，来自Opera,Apple,以及Mozilla的代表开始表达反对声。2004年Opera的Ian Hickson(伊恩•希克森)发起的HTML新标签扩展以适应新的web应用，该发起遭到W3C的拒绝，于是他们自发构造创建了超文本应用技术工作组，便是WHATWG
+从Web Applications 1.0到HTML5
+刚开始，WHATWG就和W3C走不通的道路，W3C对题目的会商是团体投票，而WHATWG则有主笔Ian Hickson定度。表面上看，W3C更民主，然而种种内部纷争会使部分决议限于泥潭，在WHATWG事情进展的更顺利，不过主笔权利并非无穷大，他们的委员会可以对那些过于偏执的主笔举行弹劾。
+WHATWG的重要议题包含两部分，Web Forms 2.0和Web Applications 1.0，他们都是HTML的扩展，逐步演变成今天的HTML5
+言归于好
+在WHATWG致力于HTML5的同时，W3C已陷入XHTML 2.0的窘境。2006年10月，Web之父Tim Berners-Lee表示了一篇文章，表示从HTML走向XML的路是行不通的，几个月后，W3C迷途知返，组建了一个新的HTML工作组，他们非常明智的选择了WHATWG的成果作为根本。然而也有人对W3C表示怀疑，因为W3C在同时进行两套标准（XHTML 2.0和HTML 5），值得注意的是W3C的HTML 5中间有个空格，而WHATWG的HTML5则没有空格。
+[4]目前Firefox、Chrome、Opera、Safari（版本4以上）、Internet Explorer 9已支持HTML5技术。
+尽管HTML5已经在网络开发人员中非常出名了，但是它成为主流媒体的一个话题还是在2010年的4月，[5][6][7][8]当时苹果公司的CEO乔布斯发表一篇题为“对flash的思考”的文章，指出随着HTML5的发展，观看视频或其它内容时，Adobe Flash将不再是必须的。这引发了开发人员间的争论，包括HTML5虽然提供了增强的功能，但开发人员必须考虑到不同浏览器对标准不同部分的支持程度的不同，以及HTML5和Flash间的功能差异。[9]
+HTML 5的标准草案目前已进入W3C制定标准5大程序的第1步。负责编纂标准格式文件的Google代表Ian Hickson预期，可能得等到2012年才会推出建议候选版（W3C Candidate Recommendation）。
+新浪与Google Map
+1、局部刷新
+2、大量使用脚本
+3、大量使用事件
+html5是app的终结者？移动操作系统 平台过多有木有 ios android windows phone RIM megoo bada 需要一个语言统治世界 phonegap
+我认为html5会像iphone给我们带来的惊喜一样，引领一场划时代的科技革命
+html5实现杂志排版
+html5布局
+html5表单
+html5音频
+html5视频
+html5定位
+html5动画
+html5中的websocket
+1. 新的Doctype声明 http://www.ityoudao.com/Web/Html_JS_646_1227.html
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN""http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+XHTML的声明太长了，我相信很少会有前端开发人员能手写出这个Doctype声明。
+HTML5的Doctype声明很短，看到这个声明相信你马上就能记住，不用浪费脑细胞去记那长的有点变态的XHTML的Doctype声明了。
+<!DOCTYPE html>
+HTML5的简短的DOCTYPE声明是让Firefox、Chrome等现代浏览器和IE6/7/8等浏览器都进入(准)标准模式，你可能会奇怪IE6/7居然也可以支持HTML5 Doctype，事实上，IE是只要doctype符合 这种格式，都会进入标准模式。
+html5视频
+youtube网站
+html5动画
+19个基于 HTML5 和 CSS3 开发的优秀应用程序 http://www.mhtml5.com/2011/09/2862.html
+作图工具 http://mugtug.com/sketchpad/
+http://www.mhtml5.com/2011/08/2602.html
+关于html5,设计师要知道些神马
+1、离线缓存
+2、音频视频
+3、地理定位
+4、Canvas绘图
+5、专为移动平台定制的表单元素
+类型	用途	键盘
+Text	正常输入内容	标准键盘
+Tel	电话号码	数字键盘
+Email	电子邮件地址文本框	带有@和.的键盘
+url	网页的URL	带有.com和.的键盘
+Search	用于搜索引擎，比如在站点顶部显示的搜索框	标准键盘
+range	特定值范围内的数值选择器，典型的显示方式是滑动条	滑动条或转盘
+6、丰富的交互方式支持
+7、HTML5使用上的优势
+8、CSS3 视觉设计师的辅助利器
+9、实时通讯
+10、档案以及硬件支持
+11、语意化
+12、双平台融合的app开发方式，提高工作效率
+HTML5现状及展望
+现在HTML5的标准还没有完全定制完成，整体开发方式上还没有一个规范性的内容，导致的结果是开发者开发的应用比较混乱，体验上也不及原生方式开发的应用，如果想要更好的用户体验，需要更多的优化。
+对于移动设备硬件的接口API，目前使用HTML5还不能方便调用移动设备的摄像头、话筒、重力感应器、GPS等硬件设备，不过这也只是时间问题，相信随着HTML5的越发完善，这样的功能一定也会支持的。
+还有一个方面就是浏览器之争，一个全面强大的移动端浏览器将对HTML5在移动平台上的发展起到至关重要的作用。
+讨论：
+如何设置背景色
+html5中文小组 http://www.w3.org/html/ig/zh/
+十个使用HTML5开发的精彩应用 http://www.cnbeta.com/articles/130992.htm
+苹果的未来
+http://html5magazine.nl/
+css3 文字背景色 html5 元素 html5 video html5 不同浏览器支持视频 safari 获取重力感应 jQtouch node app engine
+一些经验
+浏览器版本更新，一些程序需要调整，程序员还在郁闷为什么？
+chrome说： IETF:Internet工程任务组（Internet Engineering Task Force）又有了新的握手方式，让我们来实现它吧
+mozilla,opera说：看起来websocket并不安全，我们在下一个版本中将不再支持websocket
+ie说：我们要开发一个超时代的浏览器，至少十年不更新，但是必须使用windows 7
+想到这里，我只能感慨一句话“还好我们还有苹果”，谢谢Jobs
+一台iphone作为服务器，其他iphone访问该服务器，不需要安装应用
+人人都可编程
+音频
+http://google-html5-hackathon-projects.googlecode.com/hg/real-piano/index.html
+http://chrome.angrybirds.com/
+http://html5ppt.sinaapp.com
+http://browser5.sinaapp.com
+mousemove
+mousedown
+mouseup
+mouseover
+mouseout
+click
+blur
+focus
+load
+unload
+reset
+submit
+change
+abort
+orientationchange
+touchstart
+touchmove
+touchend
+touchcancel
+gesturestart
+gesturechange
+gestureend
+during WebSocket handshake: 'Sec-WebSocket-Accept' header is missing nodejs websocket websocket nodejs output object websocket sec-websocket-key websocket 7 broadcast Unrecognized frame opcode: websocket 协议 http://tools.ietf.org/html/draft-hixie-thewebsocketprotocol-76 http://tools.ietf.org/html/draft-ietf-hybi-thewebsocketprotocol-15#section-5.2

@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Books API Example</title>
+		<meta charset="utf-8" />
+                <meta property="wb:webmaster" content="c2448848709d082c" />
+	</head>
+	<body>
+		<div id="content"></div>
+		<script type="text/javascript">
+			function handleResponse(response) {
+				for(var i = 0 ; i < response.items.length ; i++) {
+					var item = response.items[i];
+					// in production code, item.text should have the HTML entities escaped
+					document.getElementById("content").innerHTML += "<br>" + item.volumeInfo.title;
+				}
+			}
+		</script>
+		<script src="https://www.googleapis.com/books/v1/volumes?q=harry+potter&callback=handleResponse"></script>
+	</body>
+</html>

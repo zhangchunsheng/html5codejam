@@ -1,0 +1,37 @@
+2012-02-04
+参考网站 http://www.meishij.net/
+国外 优秀网站 html5 网站模板 优秀网站模板 css 圆形
+http://www.cnblogs.com/lhb25/archive/2011/08/18/html5-awesome-personal-websites-inspiration.html
+http://henry.brown.name/
+http://www.cnblogs.com/lhb25/archive/2011/04/19/2014303.html
+http://resource.btxstudio.com/2010/05/08/931
+功能：
+1、小吃 徐州小吃 田田 兰兰
+2、搜索
+
+美食杰首页
+菜谱：家常菜谱 外国菜谱
+中华菜系
+各地小吃
+食材百科
+厨房百科
+
+模仿Google+ Circle 中间为徐州小吃 点击出现小吃名称
+
+小吃信息
+主要信息：
+名称：
+做法：蒸 煮 炒
+口味：咸鲜味
+难度：新手尝试
+人数：1人份
+准备时间：5分钟
+烹饪时间：10分钟
+主料：鸡蛋 1个
+调料：食盐 3克 水 适量
+营养信息:
+适合体质
+营养信息：热量 胆固醇 钠 维生素A 钾 磷 钙 硒 蛋白质 镁 脂肪 淡水化合物 铁 维生素E 锌 维生素B2 烟酸 铜 维生素B1 锰
+食疗功效
+适用人群
+作者 时间 看过人数

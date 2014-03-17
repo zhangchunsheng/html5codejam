@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html manifest="cache.manifest">
+	<head>
+		<title>magic piano</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
+		<meta name="apple-mobile-web-app-capable" content="yes" /><!-- 离线应用的另一个技巧 -->
+		<meta name="apple-mobile-web-app-status-bar-style" content="black" /><!-- 隐藏状态栏 -->
+		<meta name="format-detection" content="false" />
+		<meta name="Author" content="Mr. Zhang" />
+		<link rel="stylesheet" href="./css/piano.css" media="all" />
+		<link rel="apple-touch-icon" sizes="72x72" href="gamehub-72.png">
+		<link rel="apple-touch-icon" sizes="114x114" href="gamehub-114.png">
+		<link rel="apple-touch-icon-precomposed" href="gamehub-114.png">
+		<link rel="apple-touch-startup-image" href="init.png">
+		<script type="text/javascript" src="./js/piano.js"></script>
+	</head>
+	<body onload="drawCanvas()">
+		<canvas id="piano" name="piano" width="480px" height="320px" class="canvas" onclick="playPiano(this, event)">
+			您的浏览器是老古董了！
+			<div id="canvasNotSupportedBox">
+				<h1>This browser does not appear to support HTML5.  Try upgrading your browser to the latest version.  <a href="http://www.whatbrowser.org">What is a browser?</a>
+				<br/><br/><a href="http://www.microsoft.com/windows/internet-explorer/default.aspx">Microsoft Internet Explorer</a><br/>
+				<a href="http://www.mozilla.com/firefox/">Mozilla Firefox</a><br/>
+				<a href="http://www.google.com/chrome/">Google Chrome</a><br/>
+				<a href="http://www.apple.com/safari/download/">Apple Safari</a><br/>
+				<a href="http://www.google.com/chromeframe">Google Chrome Frame for Internet Explorer</a>
+				</h1>
+			</div>
+		</canvas>
+		<!--<audio id="audio" name="audio" controls="controls" class="hidden">
+			<source src="./sound/61.mp3" type="audio/mp3" />
+		</audio>-->
+		<!--<button id="button" name="button" onclick="playAudio()">button</button>-->
+	</body>
+</html>

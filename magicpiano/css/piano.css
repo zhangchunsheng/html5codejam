@@ -1,0 +1,13 @@
+body {
+	background-color:#000000
+}
+
+.canvas {
+	width:480px;
+	height:320px;
+	text-align:center;
+}
+
+.hidden {
+	display:none;
+}

@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>reader</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0">
+		<meta name="format-detection" content="telephone=no">
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black">
+		<link rel="apple-touch-startup-image" href="startup.png">
+		<style type="text/css">
+			body {
+				background: 
+					url("../images/right.jpg") right repeat-y,#EAE5CC -webkit-gradient(
+					linear,0 0,100% 0,from(rgba(0, 0, 0, 0.25)),
+					color-stop(2%,rgba(0, 0, 0, 0.13)),
+					color-stop(4%,rgba(0, 0, 0, 0.11)),
+					color-stop(8%,rgba(0, 0, 0, 0.06)),
+					color-stop(15%,transparent)
+				);
+				font-size: 20px;
+				line-height: 29px;
+				margin-left:20px;
+			}
+			.header {
+				text-align: center;
+				line-height: 1.5em;
+				color: #704F32;
+				font-size: 12px;
+				position: absolute;
+				left: 30px;
+				right: 30px;
+				top: 5px;
+				white-space: nowrap;
+				text-overflow: ellipsis;
+				overflow: hidden;
+			}
+			.footer {
+				position: absolute;
+				left: 20px;
+				right: 10px;
+				bottom: 5px;
+				color: #704F32;
+				font-size: 12px;
+				text-align: center;
+			}
+			#book {
+				width:279px;
+				height:417px;
+			}
+			#book .turn-page {
+				width:279px;
+				height:417px;
+				background-color:#EAE5CC;
+				background-size:100% 100%;
+			}
+		</style>
+		<script type="text/javascript" src="../js/jquery-1.6.1.min.js"></script>
+		<script type="text/javascript" src="../js/turn.js"></script>
+		<script type="text/javascript" src="../js/functions.js"></script>
+		<script type="text/javascript">
+			var currentPage = 1;
+			var perpage = 60 * 2;
+			var allpage = 0;
+			var pageInfo = {};
+			var key = "http://localhost:9090/phone/book/turn.js/beijixing/demo/reader.html";
+			var page = 0;
+			$(document).ready(function() {
+				page = getSessionData(key);
+				$.ajax({
+					async: false,
+					url: "http://zreader.sinaapp.com/beijixing/content.php?currentPage=" + currentPage + "&perpage=" + perpage,
+					type: "GET",
+					dataType: "jsonp",
+					jsonp: "callback",
+					timeout: 6000,
+					success: function(json) {
+						$("#content").text(json.contentInfo);
+						allpage = json.pageInfo.allPage;
+						var j = 0;
+						for(var i = 2 ; i <= allpage * 2 ; i++) {
+							if(i % 2 == 0) {
+								var html = "<div></div>";
+							} else {
+								j++;
+								var html = '<div><div class="header">第一章</div><div id="' + (i - 1*j) + '" class="" style="-webkit-box-flex: 1;height: 0px;padding: 32px 0px 0px 25px;"></div><div class="footer">第' + (i - 1*j) + '页</div></div>';
+							}
+							$(html).appendTo("#book");
+						}
+						for(var i = 0 ; i <= allpage + 2 ; i++) {
+							pageInfo[(i + 1) * 2] = i;
+						}
+						console.log("pageInfo:" + pageInfo);
+						$('#book').turn({acceleration: true, shadows: true});
+						if(page != null) {
+							console.log("page:" + page);
+							$('#book').turn('page', parseInt(page));
+						}
+					},
+					error: function(xhr) {
+						alert("网络出错了");
+					}
+				});
+				var sum = 0;
+				var flag = true;
+				$('#book').bind('turned', function(e, page) {
+					console.log('Current view: ', $('#book').turn('view'));
+					var currentView = $("#book").turn("view");
+					if(currentPage == currentView[0])
+						return;
+					currentPage = currentView[0];
+					if(currentPage == 0)
+						currentPage = 1;
+					sum = pageInfo[currentPage];
+					if(currentPage % 2 == 0) {
+						console.log("sum:" + sum);
+						currentPage = currentPage - 1*sum;
+						//sum++;
+					}
+					console.log("currentPage:" + currentPage);
+					if(currentPage > 0) {
+						$.ajax({
+							async: false,
+							url: "http://zreader.sinaapp.com/beijixing/content.php?currentPage=" + currentPage + "&perpage=" + perpage,
+							type: "GET",
+							dataType: "jsonp",
+							jsonp: "callback",
+							timeout: 6000,
+							success: function(json) {
+								$("#" + currentPage).text(json.contentInfo);
+							},
+							error: function(xhr) {
+								alert("网络出错了");
+							}
+						});
+						addSessionData(key, currentView[0]);
+					}
+				});
+				init();
+			});
+			function init() {
+				function onOriChange() {
+					var bodyStyle = document.body.style,
+					availHeight = window.screen.availHeight,
+					orientation = window.orientation;
+					bodyStyle.height = orientation == 0 || orientation == 180 ? "417px" : "269px",
+					setTimeout(scrollTo, 100, 0, 1)
+				}
+				addEventListener("orientationchange", onOriChange, !1),
+				addEventListener("scroll", function() {
+					!pageYOffset && scrollTo(0,1)
+				}, !1),
+				onOriChange()
+			}
+		</script>
+		<script type="text/javascript">
+			var _gaq = _gaq || [];
+			_gaq.push(['_setAccount', 'UA-29850324-3']);
+			_gaq.push(['_trackPageview']);
+
+			(function() {
+				var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+				ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+				var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+			})();
+		</script>
+	</head>
+	<body>
+		<div id="book">
+			<div>
+				<div class="header">第一章</div>
+				<div id="content" class="" style="-webkit-box-flex: 1;height: 0px;padding: 32px 0px 0px 25px;"></div>
+				<div class="footer">第1页</div>
+			</div>
+		</div>
+	</body>
+</html>

@@ -1,0 +1,4 @@
+html, body{ margin:0; padding:0; height:100%; max-width:960px; max-height:640px;}
+#eater{background-size:100% 100%; position:relative;}
+
+.cover{background:url(images/bg.png)}

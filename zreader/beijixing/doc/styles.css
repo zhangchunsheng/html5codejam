@@ -104,7 +104,7 @@ body {
 
 .slides.template-io2011 > article:not(.nobackground):not(.biglogo) {
   background: url(images/colorbar.png) 0 600px repeat-x,
-              url(images/bottom.png) 640px 625px no-repeat;
+              url(images/googleio-logo.png) 640px 625px no-repeat;
 
   background-size: 100%, 225px;  
 
@@ -159,7 +159,7 @@ body {
 }
 
 .slides.template-io2011 article.biglogo {
-  background: white url(images/biglogo.png) 50% 50% no-repeat;
+  background: white url(images/googleio-logo.png) 50% 50% no-repeat;
 
   background-size: 600px;
 }

@@ -1156,6 +1156,7 @@ flipMethods = {
 			events = (isTouch) ? {start: 'touchstart', move: 'touchmove', end: 'touchend'} : {start: 'mousedown', move: 'mousemove', end: 'mouseup'};
 
 			$(document).bind(events.start, function() { 
+			console.log("mousedown");
 				return flipMethods._eventStart.apply(that, arguments); 
 			}).
 			bind(events.move, function() {

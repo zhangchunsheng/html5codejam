@@ -10,7 +10,7 @@
   URL: http://code.google.com/p/html5slides/
 */
 
-var PERMANENT_URL_PREFIX = 'http://localhost:9090/google/html5slides/';
+var PERMANENT_URL_PREFIX = 'http://zhangchunsheng.github.io/html5codejam/html5slides/';
 
 var SLIDE_CLASSES = ['far-past', 'past', 'current', 'next', 'far-next'];
 
